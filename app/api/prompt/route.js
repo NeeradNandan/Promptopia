@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { connectToDB } from "@utils/database";
 import Prompt from "@models/prompt";
+import User from "@models/user";
 
 export const GET = async (request) => {
     try {
