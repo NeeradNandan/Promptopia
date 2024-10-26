@@ -15,6 +15,9 @@ const nextConfig = {
     // Ignore ESLint errors during builds to avoid blocking the build process
     ignoreDuringBuilds: true,
   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 };
 
 export default nextConfig;
