@@ -1,12 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 "use client";
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter,useSearchParams } from 'next/navigation';
 
 import Form from '@components/Form';
 
-const EditPromptContent = () => {
+const EditPrompt = () => {
     const router = useRouter();
     //const { data: session } = useSession();
     const searchParmas = useSearchParams();
@@ -63,14 +63,6 @@ const EditPromptContent = () => {
         handleSubmit = {updatePrompt}
     />
   )
-};
+}
 
-const EditPromptPage = () => {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <EditPromptContent />
-    </Suspense>
-  );
-};
-
-export default EditPromptPage;
+export default EditPrompt
